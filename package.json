@@ -1,0 +1,20 @@
+{
+  "name": "electron-app-linux",
+  "productName": "SoccerGame",
+  "version": "1.0.0",
+  "description": "Demos and game for the tutorial \"The Making of 'The Aviator': Animating a Basic 3D Scene with Three.js\", by Karim Maaloul.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron  --no-sandbox src/index.js",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron Tutorial App\"",    
+    "package-linux": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=true --out=release-builds"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^13.1.1",
+    "electron-packager": "^15.2.0"
+  }
+}
